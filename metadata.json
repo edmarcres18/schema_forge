@@ -1,0 +1,5 @@
+{
+  "name": "SchemaForge",
+  "description": "A next-gen AI-powered database schema designer. Visual editor, SQL export, and Gemini-powered schema generation.",
+  "requestFramePermissions": []
+}

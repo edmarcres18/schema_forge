@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SchemaForge - AI Database Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reactflow@11.11.4/dist/style.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              primary: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                200: '#99f6e4',
+                300: '#5eead4',
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e', // Teal 700 - Main Brand Color
+                800: '#115e59',
+                900: '#134e4a',
+                950: '#042f2e',
+              },
+              slate: {
+                850: '#1e293b', // Custom dark slate
+              }
+            },
+            backgroundImage: {
+              'grid-pattern': "linear-gradient(to right, #e2e8f0 1px, transparent 1px), linear-gradient(to bottom, #e2e8f0 1px, transparent 1px)",
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f8fafc; /* Slate 50 */
+        color: #0f172a; /* Slate 900 */
+      }
+      .bg-grid {
+        background-size: 40px 40px;
+        background-image: linear-gradient(to right, #f1f5f9 1px, transparent 1px),
+                          linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
+      }
+      /* React Flow Customization for Light Theme */
+      .react-flow__node {
+        border-radius: 12px;
+        border: 1px solid #cbd5e1; /* Slate 300 */
+        background: #ffffff;
+        color: #0f172a;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      }
+      .react-flow__handle {
+        background: #0f172a;
+        width: 8px;
+        height: 8px;
+        border: 2px solid white;
+      }
+      .react-flow__edge-path {
+        stroke: #64748b; /* Slate 500 */
+        stroke-width: 2;
+      }
+      .react-flow__controls {
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        border: 1px solid #e2e8f0;
+      }
+      .react-flow__controls-button {
+        background-color: white;
+        border-bottom: 1px solid #e2e8f0;
+        fill: #475569;
+      }
+      .react-flow__controls-button:hover {
+        background-color: #f8fafc;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "zustand": "https://aistudiocdn.com/zustand@^5.0.9",
+    "reactflow": "https://aistudiocdn.com/reactflow@^11.11.4",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.10.0",
+    "reactflow/": "https://aistudiocdn.com/reactflow@^11.11.4/",
+    "nanoid": "https://aistudiocdn.com/nanoid@^5.1.6",
+    "@supabase/supabase-js": "https://aistudiocdn.com/@supabase/supabase-js@^2.39.0",
+    "dagre": "https://aistudiocdn.com/dagre@^0.8.5"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
